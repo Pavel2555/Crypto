@@ -80,7 +80,7 @@ extension HomeView {
     List {
       ForEach(vm.allCoins) { coin in
         CoinRowView(coin: coin, showHoldingsColumn: false)
-          .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+          .listRowInsets(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 10))
       }
     }
     .listStyle(.plain)
