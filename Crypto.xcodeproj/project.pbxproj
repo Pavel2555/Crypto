@@ -12,6 +12,9 @@
 		D0549F662A87F506003978E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0549F652A87F506003978E6 /* Preview Assets.xcassets */; };
 		D08008172A87F8A0009EA3D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08008162A87F8A0009EA3D6 /* Assets.xcassets */; };
 		D080081A2A87FAA2009EA3D6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08008192A87FAA2009EA3D6 /* Color.swift */; };
+		D08008202A87FD3F009EA3D6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D080081F2A87FD3F009EA3D6 /* HomeView.swift */; };
+		D08008242A87FE2E009EA3D6 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08008232A87FE2E009EA3D6 /* CircleButtonView.swift */; };
+		D08008262A88012F009EA3D6 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08008252A88012F009EA3D6 /* CircleButtonAnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		D0549F652A87F506003978E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D08008162A87F8A0009EA3D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Resources/Assets.xcassets; sourceTree = "<group>"; };
 		D08008192A87FAA2009EA3D6 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		D080081F2A87FD3F009EA3D6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D08008232A87FE2E009EA3D6 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		D08008252A88012F009EA3D6 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +59,9 @@
 		D0549F5D2A87F506003978E6 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
-				D08008182A87FA87009EA3D6 /* Extension */,
 				D0549F5E2A87F506003978E6 /* CryptoApp.swift */,
+				D08008182A87FA87009EA3D6 /* Extension */,
+				D080081B2A87FCF6009EA3D6 /* Core */,
 				D0549F602A87F506003978E6 /* ContentView.swift */,
 				D08008162A87F8A0009EA3D6 /* Assets.xcassets */,
 				D0549F642A87F506003978E6 /* Preview Content */,
@@ -76,6 +83,56 @@
 				D08008192A87FAA2009EA3D6 /* Color.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D080081B2A87FCF6009EA3D6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D08008212A87FDFD009EA3D6 /* Components */,
+				D080081C2A87FD1B009EA3D6 /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D080081C2A87FD1B009EA3D6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D080081E2A87FD2F009EA3D6 /* ViewModels */,
+				D080081D2A87FD27009EA3D6 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D080081D2A87FD27009EA3D6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D080081F2A87FD3F009EA3D6 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D080081E2A87FD2F009EA3D6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D08008212A87FDFD009EA3D6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D08008222A87FE1B009EA3D6 /* CircleButton */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D08008222A87FE1B009EA3D6 /* CircleButton */ = {
+			isa = PBXGroup;
+			children = (
+				D08008232A87FE2E009EA3D6 /* CircleButtonView.swift */,
+				D08008252A88012F009EA3D6 /* CircleButtonAnimationView.swift */,
+			);
+			path = CircleButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +206,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0549F612A87F506003978E6 /* ContentView.swift in Sources */,
+				D08008202A87FD3F009EA3D6 /* HomeView.swift in Sources */,
 				D0549F5F2A87F506003978E6 /* CryptoApp.swift in Sources */,
+				D08008242A87FE2E009EA3D6 /* CircleButtonView.swift in Sources */,
 				D080081A2A87FAA2009EA3D6 /* Color.swift in Sources */,
+				D08008262A88012F009EA3D6 /* CircleButtonAnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +347,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,7 +377,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
