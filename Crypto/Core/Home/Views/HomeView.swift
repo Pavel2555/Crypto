@@ -13,6 +13,9 @@ struct HomeView: View {
   @State private var showPortfolio: Bool = false // animate right
   @State private var showPortfolioView: Bool = false // new sheet
   
+  @State private var selectedCoin: CoinModel?
+  @State private var showDetailView: Bool = false
+  
   var body: some View {
     ZStack {
       //background layer
@@ -35,17 +38,20 @@ struct HomeView: View {
         
         if !showPortfolio {
           allCoinsList
-          .transition(.move(edge: .leading))
+            .transition(.move(edge: .leading))
         }
         if showPortfolio {
           portfolioCoinsList
             .transition(.move(edge: .trailing))
         }
-       
-        
+
         Spacer(minLength: 0)
       }
     }
+    .navigationDestination(
+      isPresented: $showDetailView) {
+        DetailLoadingView(coin: $selectedCoin)
+      }
   }
 }
 
@@ -95,9 +101,18 @@ extension HomeView {
       ForEach(vm.allCoins) { coin in
         CoinRowView(coin: coin, showHoldingsColumn: false)
           .listRowInsets(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 10))
+          .contentShape(Rectangle())
+          .onTapGesture {
+            segue(coin: coin)
+          }
       }
     }
     .listStyle(.plain)
+  }
+  
+  private func segue(coin: CoinModel) {
+    selectedCoin = coin
+    showDetailView.toggle()
   }
   
   private var portfolioCoinsList: some View {
@@ -159,7 +174,6 @@ extension HomeView {
         Image(systemName: "goforward")
       }
       .rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0), anchor: .center)
-
     }
     .font(.caption)
     .foregroundColor(.theme.secondaryText)
