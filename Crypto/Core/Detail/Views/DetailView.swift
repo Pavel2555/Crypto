@@ -21,16 +21,15 @@ struct DetailLoadingView: View {
 
 struct DetailView: View {
   
-  let coin: CoinModel
+  @StateObject var vm: DetailViewModel
   
-  init(coin:CoinModel) {
-    self.coin = coin
+  init(coin: CoinModel) {
+    _vm = StateObject(wrappedValue: DetailViewModel(coin: coin))
     print("initializng detail vew for \(coin.name)")
-    
   }
   
   var body: some View {
-    Text(coin.name)
+    Text("Hello")
   }
 }
 
