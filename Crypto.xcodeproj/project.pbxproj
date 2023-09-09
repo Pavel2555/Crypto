@@ -42,6 +42,9 @@
 		D09C2B122AA938E3002A1BC0 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09C2B112AA938E3002A1BC0 /* ChartView.swift */; };
 		D09C2B142AA94C20002A1BC0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09C2B132AA94C20002A1BC0 /* Date.swift */; };
 		D09C2B162AABB72D002A1BC0 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09C2B152AABB72D002A1BC0 /* String.swift */; };
+		D09C2B1A2AABC331002A1BC0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09C2B192AABC331002A1BC0 /* SettingsView.swift */; };
+		D09C2B1E2AABF405002A1BC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09C2B1D2AABF405002A1BC0 /* LaunchScreen.storyboard */; };
+		D09C2B202AABF5A5002A1BC0 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09C2B1F2AABF5A5002A1BC0 /* LaunchView.swift */; };
 		D0B7EA672A8D4CAA000B4402 /* PortfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0B7EA652A8D4CAA000B4402 /* PortfolioContainer.xcdatamodeld */; };
 		D0B7EA692A8D4D43000B4402 /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B7EA682A8D4D43000B4402 /* PortfolioDataService.swift */; };
 		D0B7EA6B2A8EA4F8000B4402 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B7EA6A2A8EA4F8000B4402 /* HapticManager.swift */; };
@@ -85,6 +88,9 @@
 		D09C2B112AA938E3002A1BC0 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		D09C2B132AA94C20002A1BC0 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		D09C2B152AABB72D002A1BC0 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		D09C2B192AABC331002A1BC0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D09C2B1D2AABF405002A1BC0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D09C2B1F2AABF5A5002A1BC0 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		D0B7EA662A8D4CAA000B4402 /* PortfolioContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioContainer.xcdatamodel; sourceTree = "<group>"; };
 		D0B7EA682A8D4D43000B4402 /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
 		D0B7EA6A2A8EA4F8000B4402 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
@@ -179,8 +185,10 @@
 			isa = PBXGroup;
 			children = (
 				D08008212A87FDFD009EA3D6 /* Components */,
+				D09C2B1B2AABF1A0002A1BC0 /* Launch */,
 				D080081C2A87FD1B009EA3D6 /* Home */,
 				D0B7EA6C2A8EC5C0000B4402 /* Detail */,
+				D09C2B172AABC2B6002A1BC0 /* Settings */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -256,6 +264,39 @@
 				D0B7EA682A8D4D43000B4402 /* PortfolioDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		D09C2B172AABC2B6002A1BC0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D09C2B182AABC2CE002A1BC0 /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D09C2B182AABC2CE002A1BC0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D09C2B192AABC331002A1BC0 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D09C2B1B2AABF1A0002A1BC0 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				D09C2B1C2AABF1B1002A1BC0 /* Views */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		D09C2B1C2AABF1B1002A1BC0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D09C2B1D2AABF405002A1BC0 /* LaunchScreen.storyboard */,
+				D09C2B1F2AABF5A5002A1BC0 /* LaunchView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D0B7EA6C2A8EC5C0000B4402 /* Detail */ = {
@@ -342,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09C2B1E2AABF405002A1BC0 /* LaunchScreen.storyboard in Resources */,
 				D0549F662A87F506003978E6 /* Preview Assets.xcassets in Resources */,
 				D08008172A87F8A0009EA3D6 /* Assets.xcassets in Resources */,
 			);
@@ -370,6 +412,7 @@
 				D05B99572A88A81A001A2E1B /* CoinImageView.swift in Sources */,
 				D0549F5F2A87F506003978E6 /* CryptoApp.swift in Sources */,
 				D05B99612A88E053001A2E1B /* UIApplication.swift in Sources */,
+				D09C2B202AABF5A5002A1BC0 /* LaunchView.swift in Sources */,
 				D08008242A87FE2E009EA3D6 /* CircleButtonView.swift in Sources */,
 				D080081A2A87FAA2009EA3D6 /* Color.swift in Sources */,
 				D0B7EA702A8EC5F7000B4402 /* DetailView.swift in Sources */,
@@ -391,6 +434,7 @@
 				D09C2B102AA7A8E0002A1BC0 /* CoinDetailDataService.swift in Sources */,
 				D09C2B0E2AA7A8B3002A1BC0 /* DetailViewModel.swift in Sources */,
 				D0B7EA692A8D4D43000B4402 /* PortfolioDataService.swift in Sources */,
+				D09C2B1A2AABC331002A1BC0 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +569,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Crypto Tracker";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -555,7 +599,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Crypto Tracker";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
